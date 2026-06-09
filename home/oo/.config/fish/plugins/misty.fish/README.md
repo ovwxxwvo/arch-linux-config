@@ -2,7 +2,7 @@
 
 迷幻多彩主题。  
 
-![screenshot](screenshot/00.png)  
+![screenshot](https://cdn.jsdelivr.net/gh/ovwxxwvo/img-bed@main/02_fish/misty-fish.png)  
 
 ----  
 

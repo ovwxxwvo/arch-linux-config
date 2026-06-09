@@ -72,13 +72,15 @@ web browser       : firefox
 
 ----  
 **-- lemurs**  
-![screenshot]()  
-**-- fish**  
-![screenshot]()  
-**-- yazi**  
-![screenshot]()  
-**-- nvim**  
-![screenshot]()  
+![screenshot](https://cdn.jsdelivr.net/gh/ovwxxwvo/img-bed@main/00_lemurs/misty-lemurs.png)  
+**-- tmux**  
+![screenshot](https://cdn.jsdelivr.net/gh/ovwxxwvo/img-bed@main/01_tmux/misty-tmux-window.png)  
+**-- fish ( orange & violet )**  
+![screenshot](https://cdn.jsdelivr.net/gh/ovwxxwvo/img-bed@main/02_fish/misty-fish.png)  
+**-- yazi ( skyblue )**  
+![screenshot](https://cdn.jsdelivr.net/gh/ovwxxwvo/img-bed@main/03_yazi/misty-yazi.png)  
+**-- nvim ( seagreen )**  
+![screenshot](https://cdn.jsdelivr.net/gh/ovwxxwvo/img-bed@main/04_nvim/misty-nvim.png)  
 
 ____  
 #### About Config Files （关于配置文件）  
