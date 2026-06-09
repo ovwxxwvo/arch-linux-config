@@ -1,0 +1,7 @@
+# SWAY config,
+
+
+xwayland enable
+for_window [shell="xwayland"] title_format "[XWayland] %title"
+
+

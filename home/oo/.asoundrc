@@ -1,0 +1,15 @@
+# ALSA config,
+
+
+# pcm._hdmi_ac3 {
+#   type a52
+#   format S16_LE
+#   channels 6
+#   rate 48000
+#   slave.pcm "hdmi:CARD=HDMI,DEV=0"
+#   options {
+#     bitrate 640
+#   }
+# }
+
+

@@ -1,0 +1,31 @@
+# SWAY config,
+
+
+bar {
+swaybar_command swaybar
+status_command  i3blocks -c "~/.config/swaybar/i3blocks.conf"
+font pango:     "JetBrainsMono Nerd Font bold 11"
+
+gaps              4
+status_padding    3
+tray_padding      0
+separator_symbol  ""
+
+colors {
+focused_background  #202020e0
+focused_statusline  #f0f0f0f0
+focused_separator   #006060f0
+background          #202020e0
+statusline          #c0c0c0f0
+separator           #202020a0
+
+# workspace         #border    #bg        #fg
+focused_workspace   #a0f0f040  #000000a0  #80d0d0f0
+urgent_workspace    #f0a0a040  #000000a0  #d08080f0
+# workspace         #border    #bg        #fg
+active_workspace    #f0f0f040  #202020c0  #c0c0c0f0
+inactive_workspace  #f0f0f040  #202020c0  #c0c0c0f0
+
+} }
+
+

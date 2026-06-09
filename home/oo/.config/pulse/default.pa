@@ -1,0 +1,27 @@
+# PULSEAUDIO config
+
+
+.include /etc/pulse/default.pa
+
+# Auto-detect audio devices (sound card)
+load-module module-detect
+load-module module-udev-detect
+
+# Bluetooth support
+load-module module-bluetooth-policy
+load-module module-bluetooth-discover
+
+# Auto-switch output priority: Bluetooth > Headphone > HDMI
+load-module module-switch-on-connect
+load-module module-switch-on-port-available
+
+# Restore default device on disconnect
+load-module module-default-device-restore
+
+# sample rate
+set-sample-rate 48000
+
+# output 5.1
+# load-module module-combine channels=6 channel_map=front-left,front-right,rear-left,rear-right,front-center,lfe
+
+

@@ -1,0 +1,17 @@
+#!/usr/bin/env dash
+
+
+serve="$HOME/.config/swaybar/serve"
+
+nice "$serve"/state_cpu.dsh &
+nice "$serve"/state_gpu.dsh &
+nice "$serve"/state_ram.dsh &
+nice "$serve"/state_vrm.dsh &
+
+# nice bash "$serve"/workspace.bsh &>/dev/null
+# nice bash "$serve"/workspace.bsh &
+
+echo "< "
+read REPLY
+
+

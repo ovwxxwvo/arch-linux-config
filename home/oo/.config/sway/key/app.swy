@@ -1,0 +1,30 @@
+# SWAY config,
+
+
+set $alt  Mod1
+set $shft Shift
+
+
+# tmux -L $(tty|sed 's/^\/dev\///;s/\///g')
+bindsym $alt+f exec alacritty -e sh -c 'tmux -L $(tty|sed "s|/dev/||;s|/||g") new fish'
+bindsym $alt+r exec alacritty -e sh -c 'tmux -L $(tty|sed "s|/dev/||;s|/||g") new yazi'
+bindsym $alt+v exec alacritty -e sh -c 'tmux -L $(tty|sed "s|/dev/||;s|/||g") new nvim'
+
+
+bindsym  $alt+d  exec  rofi -show combi
+bindsym  $alt+c  exec  firefox
+bindsym  $alt+e  exec  kodi
+
+bindsym  $alt+t  exec  goldendict
+bindsym  $alt+g  exec  gimp
+bindsym  $alt+b  exec  VBoxManage startvm Win11
+
+
+set  $script  /home/00/script
+bindsym  $alt+s        exec  $script/alakey/entry.sh
+bindsym  $alt+w        exec  $script/alatemp/entry.sh
+
+set  $script  /home/00/script/application
+bindsym  $alt+$shft+c  exec  $script/firefox.sh
+
+

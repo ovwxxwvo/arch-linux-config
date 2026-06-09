@@ -1,0 +1,36 @@
+#!/usr/bin/env dash
+
+
+SERVE_NAME='vrm'
+SERVE_DIRT="/tmp/swaybar-$(id -u)"
+SERVE_FILE_TXT="${SERVE_DIRT}/state-${SERVE_NAME}.txt"
+SERVE_FILE_TMP="${SERVE_DIRT}/state-${SERVE_NAME}.tmp"
+DATA=''
+mkdir -p "$SERVE_DIRT"
+
+
+push_data() {
+  # echo push_data
+
+  USAGE=$( \
+    ( cat /sys/class/drm/card1/device/mem_info_vram_used
+      cat /sys/class/drm/card1/device/mem_info_vram_total )\
+    |paste -sd ' ' \
+    |awk -F"[\t ]+" '{print ($1/$2*100)}' \
+    |awk '{printf "%02d", $0}' \
+    )
+    # | awk '{ printf "%04.1f", $0 }' \
+
+  # echo "$USAGE"
+  echo "$USAGE" > "$SERVE_FILE_TMP"
+  mv "$SERVE_FILE_TMP" "$SERVE_FILE_TXT"
+
+  }
+
+
+while true ;do
+push_data
+sleep 1
+done
+
+

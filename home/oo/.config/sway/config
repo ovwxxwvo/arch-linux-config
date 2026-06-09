@@ -1,0 +1,17 @@
+# SWAY config, an improved dynamic & tiling window manager.
+
+
+set  $config  ~/.config/sway
+include $config/sway.swy
+include $config/swaywin.swy
+include $config/swaybar.swy
+include $config/swayxorg.swy
+include $config/swayapp.swy
+
+set  $key  ~/.config/sway/key
+include $key/sys.swy
+include $key/win.swy
+include $key/app.swy
+include $key/fun.swy
+
+

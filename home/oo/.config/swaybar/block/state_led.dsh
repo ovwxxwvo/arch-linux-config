@@ -1,0 +1,36 @@
+#!/usr/bin/env dash
+
+
+block="$HOME/.config/swaybar/block"
+. "$block"/icon.sh
+. "$block"/color.sh
+LABEL="$ICON_LOGO"
+
+CAP_LOCK=$( cat /sys/class/leds/input1::capslock/brightness )
+NUM_LOCK=$( cat /sys/class/leds/input1::numlock/brightness )
+# echo -e \
+  # "\n CAP_LOCK=$CAP_LOCK" \
+  # "\n NUM_LOCK=$NUM_LOCK" \
+
+
+show_block() {
+  BLOCK="$LABEL "
+  echo "$BLOCK"
+  echo "$BLOCK"
+  }
+
+show_color() {
+  if [ $CAP_LOCK -eq 1 ]; then
+    echo "$c_rerh"
+  elif [ $NUM_LOCK -eq 1 ]; then
+    echo "$c_sbrh"
+  else
+    echo "$c_cywt"
+  fi
+  }
+
+
+show_block
+show_color
+
+

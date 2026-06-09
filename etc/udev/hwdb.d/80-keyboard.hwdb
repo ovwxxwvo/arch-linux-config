@@ -1,0 +1,34 @@
+# KEYBOARD config,
+  # /usr/include/linux/input-event-codes.h
+  # sudo evtest
+  # sudo systemd-hwdb update
+  # sudo udevadm trigger
+
+# sudo evtest
+  #
+  # Event: time 1777348520.122437, type 4 (EV_MSC), code 4 (MSC_SCAN), value 70029
+  # Event: time 1777348520.122437, type 1 (EV_KEY), code 58 (KEY_CAPSLOCK), value 0
+  # Event: time 1777348520.122437, -------------- SYN_REPORT ------------
+  # Event: time 1777348111.603031, type 4 (EV_MSC), code 4 (MSC_SCAN), value 70039
+  # Event: time 1777348111.603031, type 1 (EV_KEY), code 1 (KEY_ESC), value 0
+  # Event: time 1777348111.603031, -------------- SYN_REPORT ------------
+
+# example
+  # evdev:atkbd:dmi:bvn*:bvr*:bd*:svn<vendor>:pn<product>:pvr*
+  # evdev:input:b<bus_id>v<vendor_id>p<product_id>e<version_id>-<modalias>
+  # evdev:name:<input device name>:dmi:bvn*:bvr*:bd*:svn<vendor>:pn*
+
+# 内置键盘：匹配所有AT键盘
+evdev:atkbd:dmi:*
+  KEYBOARD_KEY_01=capslock
+  KEYBOARD_KEY_3a=esc
+
+# 外置键盘：匹配所有usb键盘
+evdev:input:b0003*
+  KEYBOARD_KEY_70029=capslock
+  KEYBOARD_KEY_70039=esc
+
+# DAREU A98
+# evdev:input:b0003v05ACp024F*
+
+

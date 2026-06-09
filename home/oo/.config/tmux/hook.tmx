@@ -1,0 +1,11 @@
+# TMUX config, terminal multiplexer.
+
+
+# set-hook -g window-renamed[10] " \
+#   run -b ~/.config/tmux/hook/key.sh  \;  \
+#   "
+#
+# set-hook -g pane-focus-in[10] " \
+#   run -b ~/.config/tmux/hook/key.sh  \;  \
+#   "
+

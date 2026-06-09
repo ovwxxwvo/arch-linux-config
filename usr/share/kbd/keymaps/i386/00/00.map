@@ -1,0 +1,19 @@
+# 00.map
+keymaps 0-15
+alt_is_meta
+strings as usual
+
+include "00-modifier.inc"
+include "00-action.inc"
+include "10-qwerty.inc"
+include "10-numeric.inc"
+include "10-punctuation.inc"
+include "20-numpad.inc"
+include "30-edit.inc"
+include "40-function.inc"
+include "50-console.inc"
+include "60-system.inc"
+include "70-control.inc"
+# include "80-override.inc"
+
+

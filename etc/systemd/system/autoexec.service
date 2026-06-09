@@ -1,0 +1,13 @@
+[Unit]
+Description=auto exec script
+After=systemd-user-sessions.service
+After=getty.service
+after=lemurs.service
+
+[Service]
+ExecStart=/home/00/autoexec.sh
+
+[Install]
+WantedBy=multi-user.target
+
+

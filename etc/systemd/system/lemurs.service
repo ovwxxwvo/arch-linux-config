@@ -1,0 +1,20 @@
+[Unit]
+Description=Lemurs
+After=systemd-user-sessions.service getty-pre.target
+After=console-setup.service multi-user.target
+After=plymouth-quit-wait.service
+
+[Service]
+ExecStartPre=/bin/sleep 0.1
+ExecStart=/usr/bin/lemurs -v /etc/lemurs/variables.toml
+StandardInput=tty
+TTYPath=/dev/tty8
+TTYReset=yes
+TTYVHangup=yes
+Type=idle
+
+[Install]
+Alias=display-manager.service
+# DefaultInstance=tty8
+
+

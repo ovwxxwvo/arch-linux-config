@@ -1,0 +1,8 @@
+// ROFI config,
+
+
+@import "basic"
+
+@theme  "transparent"
+
+

@@ -1,0 +1,15 @@
+[Unit]
+Description=auto boot script one-shot
+After=systemd-user-sessions.service
+After=getty.service
+After=udisks2.service
+# After=local-fs.target
+
+[Service]
+ExecStart=/home/00/autoboot.sh
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+

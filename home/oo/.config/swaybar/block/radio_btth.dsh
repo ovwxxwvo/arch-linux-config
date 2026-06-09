@@ -1,0 +1,50 @@
+#!/usr/bin/env dash
+
+
+block="$HOME/.config/swaybar/block"
+. "$block"/icon.sh
+. "$block"/color.sh
+LABEL="$ICON_BTTH"
+CONN="$ICON_CONN"
+DISC="$ICON_DISC"
+
+
+ENABLE=$( rfkill |grep 'blue' \
+  |grep -o 'unblocked' \
+  |grep -c 'unblocked' \
+  |grep -c '2' \
+  )
+POWER=$( bluetoothctl show \
+  |grep -c 'Powered: yes' \
+  )
+STATE=$( bluetoothctl info \
+  |grep -c 'Connected: yes' \
+  )
+# echo $ENABLE $POWER $STATE
+
+
+show_block() {
+  if   [ $ENABLE -eq 0 ] ;then
+    BLOCK=""
+  elif [ $STATE -eq 0 ] ;then
+    BLOCK="$LABEL$DISC"
+  elif [ $STATE -eq 1 ] ;then
+    BLOCK="$LABEL$CONN"
+  fi
+  echo "$BLOCK"
+  echo "$BLOCK"
+  }
+
+show_color() {
+  if [ $POWER -eq 1 ] ;then
+    echo $c_sblt
+  else
+    echo $c_sbgy
+  fi
+  }
+
+
+show_block
+show_color
+
+

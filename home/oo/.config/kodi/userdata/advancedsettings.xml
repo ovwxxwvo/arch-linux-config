@@ -1,0 +1,8 @@
+<!-- KODI config, the ultimate entertainment center. -->
+
+
+<advancedsettings version="1.0">
+  <seeksteps>1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 60</seeksteps>
+</advancedsettings>
+
+

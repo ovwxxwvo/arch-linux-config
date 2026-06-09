@@ -1,0 +1,34 @@
+# SWAY config,
+
+
+set $alt  Mod1
+set $ctrl Ctrl
+set $shft Shift
+
+
+# system
+set  $script  /home/00/script/system
+
+bindsym  $alt+$shft+Backslash  exec  swaymsg bar mode toggle
+bindsym  $alt+$shft+Tab        exec  sway reload
+bindsym  $alt+Escape           exec  swaylock
+
+bindsym  $ctrl+$alt+BackSpace  exec  $script/logout.sh
+bindsym  $ctrl+$alt+Delete     exec  $script/reboot.sh
+bindsym  $ctrl+$alt+Insert     exec  $script/poweroff.sh
+bindsym  $ctrl+$alt+KP_Decimal exec  $script/reboot.sh
+bindsym  $ctrl+$alt+KP_0       exec  $script/poweroff.sh
+
+bindsym  $ctrl+$alt+Left       exec  sudo chvt $(($(sudo fgconsole)-1))
+bindsym  $ctrl+$alt+Right      exec  sudo chvt $(($(sudo fgconsole)+1))
+bindsym  $ctrl+$alt+1          exec  sudo chvt 1
+bindsym  $ctrl+$alt+2          exec  sudo chvt 2
+bindsym  $ctrl+$alt+3          exec  sudo chvt 3
+bindsym  $ctrl+$alt+4          exec  sudo chvt 4
+bindsym  $ctrl+$alt+5          exec  sudo chvt 5
+bindsym  $ctrl+$alt+6          exec  sudo chvt 6
+bindsym  $ctrl+$alt+7          exec  sudo chvt 7
+bindsym  $ctrl+$alt+8          exec  sudo chvt 8
+bindsym  $ctrl+$alt+9          exec  sudo chvt 9
+bindsym  $ctrl+$alt+0          exec  sudo chvt 0
+

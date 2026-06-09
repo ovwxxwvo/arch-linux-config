@@ -1,0 +1,26 @@
+# ALACRITTY config,
+
+
+[keyboard]
+bindings = [
+
+{ key = "M",      mods = "Control",    chars = "\x1bM"    },
+
+{ key = "[",      mods = "Control",    chars = "\x1b{"    },
+{ key = "]",      mods = "Control",    chars = "\x1b}"    },
+{ key = ";",      mods = "Control",    chars = "\x1b:"    },
+{ key = "'",      mods = "Control",    chars = "\x1b\""   },
+{ key = ",",      mods = "Control",    chars = "\x1b<"    },
+{ key = ".",      mods = "Control",    chars = "\x1b>"    },
+
+{ key = "Escape", mods = "Control",    chars = "\x1b\x1b" }
+
+# { key = "`",  mods = "Control", chars = "\x1b~" },
+# { key = "-",  mods = "Control", chars = "\x1b-" },
+# { key = "=",  mods = "Control", chars = "\x1b+" },
+# { key = "\\", mods = "Control", chars = "\x1b|" },
+# { key = "/",  mods = "Control", chars = "\x1b?" },
+
+]
+
+

@@ -1,0 +1,42 @@
+#!/usr/bin/env dash
+
+
+#   󰇥 
+# ICON_00=""
+ICON_00="╪"
+ICON_LOGO=""
+ICON_SYNC="󱍸"
+
+#  
+ICON_CPU=""
+ICON_GPU=""
+ICON_MEM=""
+ICON_BLK="󰋊"
+
+ICON_ENET=""
+ICON_WLAN=""
+ICON_BTTH=""
+
+ICON_UDISK="󱊞"
+ICON_SAMBA="󰌘"
+ICON_OLLAMA="󱀆"
+ICON_CLASH="󰖂"
+ICON_SHARE=""
+
+ICON_VOL=""
+ICON_MIC=""
+ICON_CAM="󰖠"
+ICON_VOL_MUTE=""
+ICON_MIC_MUTE=""
+
+ICON_SCREEN=""
+ICON_TEMP=""
+
+ICON_ON="o"
+ICON_OF="x"
+ICON_UP=""
+ICON_DN=""
+ICON_CONN="\""
+ICON_DISC="x"
+
+

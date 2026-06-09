@@ -1,0 +1,19 @@
+# SWAY config,
+
+
+set $alt  Mod1
+set $menu rofi
+set $term alacritty
+floating_modifier Ctrl
+
+exec         nice /home/00/autoexec.sh
+exec_always  nice /home/00/autosway.sh
+
+
+input type:keyboard xkb_capslock disabled
+input type:keyboard xkb_numlock  enabled
+
+output "YCT Sculptor 0x30305153" mode 2560x1440 scale 1.4
+output "*" bg "/data/32_image/wallpaper/00.jpg" fill
+
+

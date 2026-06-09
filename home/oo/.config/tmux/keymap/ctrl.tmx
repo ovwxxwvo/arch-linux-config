@@ -1,0 +1,49 @@
+# TMUX config,
+
+
+# basic
+  bind -n    M-Escape   copy-mode
+  bind -n    C-v        run -b '~/.config/tmux/key/paste-clip.sh'
+  bind -n    F1         run -b '~/.config/tmux/key/open-file.sh'
+
+# tab & win
+  bind -n    C-q        run -b '~/.config/tmux/key/exit-cmd.sh'
+  bind -n    C-Space    select-pane -R
+  bind -n    M-\"       rotate-window
+  bind -n    M-M        new-window
+  bind -n    M-\{       split-window -h
+  bind -n    M-\}       split-window -v
+
+# tab focus
+  bind -n    M-\<       selectw -p
+  bind -n    M-\>       selectw -n
+# win focus
+  bind -n    C-j        selectp -L
+  bind -n    C-k        selectp -U
+  bind -n    C-l        selectp -D
+  bind -n    M-\:       selectp -R
+
+# tab focus
+  bind -n    C-1        selectw -t 1
+  bind -n    C-2        selectw -t 2
+  bind -n    C-3        selectw -t 3
+  bind -n    C-4        selectw -t 4
+  bind -n    C-5        selectw -t 5
+  bind -n    C-6        selectw -t 6
+  bind -n    C-7        selectw -t 7
+  bind -n    C-8        selectw -t 8
+  bind -n    C-9        selectw -t 9
+  bind -n    C-0        selectw -t 10
+
+# win move  in tab
+  bind -n    C-S-Left   swapp -U
+  bind -n    C-S-Right  swapp -D
+  bind -n    C-S-Up     swapp -U
+  bind -n    C-S-Down   swapp -D
+# win resize
+  bind -n    C-Up       resizep -U 2
+  bind -n    C-Down     resizep -D 2
+  bind -n    C-Left     resizep -L 2
+  bind -n    C-Right    resizep -R 2
+
+

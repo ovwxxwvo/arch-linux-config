@@ -1,0 +1,48 @@
+# TMUX config,
+
+
+# basic
+  bind -n  M-Tab      " source ~/.config/tmux/keymap/ctrl.tmx \; display 'Reloaded Tmux Key' "
+  bind -n  M-Escape   copy-mode
+  bind -n  M-Space    selectp -R
+
+# tab & win
+  bind -n  M-q        run -b "~/.config/tmux/key/exit.sh"
+  bind -n  M-m        new-window
+  bind -n  M-[        splitw -h
+  bind -n  M-]        splitw -v
+  bind -n  M-\'       next-layout
+
+# tab focus
+  bind -n  M-\,       selectw -p
+  bind -n  M-\.       selectw -n
+# win focus
+  bind -n  M-j        selectp -L
+  bind -n  M-k        selectp -U
+  bind -n  M-l        selectp -D
+  bind -n  M-\;       selectp -R
+
+# tab focus
+  bind -n  M-1        selectw -t 1
+  bind -n  M-2        selectw -t 2
+  bind -n  M-3        selectw -t 3
+  bind -n  M-4        selectw -t 4
+  bind -n  M-5        selectw -t 5
+  bind -n  M-6        selectw -t 6
+  bind -n  M-7        selectw -t 7
+  bind -n  M-8        selectw -t 8
+  bind -n  M-9        selectw -t 9
+  bind -n  M-0        selectw -t 10
+
+# win move  in tab
+  bind -n  M-S-Left   swapp -U
+  bind -n  M-S-Right  swapp -D
+  bind -n  M-S-Up     swapp -U
+  bind -n  M-S-Down   swapp -D
+# win resize
+  bind -n  M-Up       resizep -U 2
+  bind -n  M-Down     resizep -D 2
+  bind -n  M-Left     resizep -L 2
+  bind -n  M-Right    resizep -R 2
+
+

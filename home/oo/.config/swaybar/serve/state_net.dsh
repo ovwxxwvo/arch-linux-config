@@ -1,0 +1,52 @@
+#!/usr/bin/env dash
+
+
+SERVE_NAME='net'
+SERVE_DIRT="/tmp/swaybar-$(id -u)"
+SERVE_FILE_TXT="${SERVE_DIRT}/state-${SERVE_NAME}.txt"
+SERVE_FILE_TMP="${SERVE_DIRT}/state-${SERVE_NAME}.tmp"
+DATA=''
+mkdir -p "$SERVE_DIRT"
+
+
+pull_data() {
+  echo pull_data
+  DATA=$( \
+    cat /proc/stat | grep '^cpu ' \
+    |awk -F"[\t ]+" '{print ($2+$3+$4+$5+$6+$7+$8+$9+$10+$11),$5}' \
+    )
+  }
+
+push_data() {
+  echo push_data
+
+  DATA_NOW=$( \
+    cat /proc/stat | grep '^cpu ' \
+    |awk -F"[\t ]+" '{print ($2+$3+$4+$5+$6+$7+$8+$9+$10+$11),$5}' \
+    )
+
+  USAGE_TMP=$( \
+    echo "$DATA $DATA_NOW" \
+    |awk -F"[\t ]+" '{print ((($3-$1)-($4-$2))/($3-$1)*100)}' \
+    |awk '{printf "%02d", $0}' \
+    )
+    # | awk '{ printf "%04.1f", $0 }' \
+
+  DATA="$DATA_NOW"
+
+  USAGE="$USAGE_TMP"
+
+  echo "$USAGE"
+  echo "$USAGE" > "$SERVE_FILE_TMP"
+  mv "$SERVE_FILE_TMP" "$SERVE_FILE_TXT"
+
+  }
+
+
+# pull_data
+while true ;do
+push_data
+sleep 1
+done
+
+
