@@ -16,9 +16,14 @@ local actions = {
 }
 
 local mode    = { 'c' }
-for _, v in pairs(actions) do
-  v.mode = mode
-  v.noremap = true
+for _, act in pairs(actions) do
+  act.mode = mode
+  act.opts = {
+    desc = act.desc,
+    noremap = true,
+    -- expr = true,
+    }
+  act.desc = nil
 end
 
 return actions

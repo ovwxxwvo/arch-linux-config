@@ -1,7 +1,7 @@
 -- NVIM config,
 
 
-local km  = require("keymap")
+local km  = require("miraction")
 local act = km.actions
 km.setup({
 
@@ -24,6 +24,7 @@ km.setup({
   { 'K',   act.goto_history_prev  },
   { 'L',   act.goto_history_next  },
 
+  -- { 'h',  act.object_add_quote },
   { 'h',   act.goto_search_prev   },
   { 'n',   act.goto_search_next   },
 

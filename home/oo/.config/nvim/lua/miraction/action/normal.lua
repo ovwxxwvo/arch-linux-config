@@ -15,6 +15,7 @@ local actions         = {
   fold_global_all  = { act = '',         desc = 'fold_global_all',  },
   fold_global_one  = { act = '',         desc = 'fold_global_one',  },
 
+  backspace_char   = { act = '\"_xh',    desc = 'backspace char',   },
   enter_line_below = { act = 'o<ESC>',   desc = 'enter line below', },
   space_char_beg   = { act = 'a <ESC>h', desc = 'space char beg',   },
   space_char_end   = { act = 'i <ESC>l', desc = 'space char end',   },
@@ -27,9 +28,14 @@ a.fold_global_all.act = function() vim.opt.foldlevel = vim.opt.foldlevel:get() =
 a.fold_global_one.act = function() vim.opt.foldlevel = vim.opt.foldlevel:get() == 0 and  1 or 0 end
 
 local mode = { 'n' }
-for _, v in pairs(actions) do
-  v.mode = mode
-  v.noremap = true
+for _, act in pairs(actions) do
+  act.mode = mode
+  act.opts = {
+    desc = act.desc,
+    noremap = true,
+    -- expr = true,
+    }
+  act.desc = nil
 end
 
 return actions

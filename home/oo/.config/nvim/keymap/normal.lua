@@ -1,7 +1,7 @@
 -- NVIM config,
 
 
-local km  = require("keymap")
+local km  = require("miraction")
 local act = km.actions
 km.setup({
 
@@ -15,6 +15,7 @@ km.setup({
   { 'b',       act.fold_global_all  },
   { 'B',       act.fold_global_one  },
 
+  { '<BS>',    act.backspace_char   },
   { '<ENTER>', act.enter_line_below },
   { '>',       act.space_char_beg   },
   { '<',       act.space_char_end   },

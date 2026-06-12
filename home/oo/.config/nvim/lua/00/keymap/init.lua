@@ -14,7 +14,7 @@ local M = {}
   local modify  = require('keymap.action.modify')
   local normal  = require('keymap.action.normal')
   local visual  = require('keymap.action.visual')
-  local object  = require('keymap.action.object')
+  local surround= require('keymap.action.surround')
   local insert  = require('keymap.action.insert')
   local command = require('keymap.action.command')
   local control = require('keymap.action.control')
@@ -22,7 +22,7 @@ local M = {}
   local plugin  = require('keymap.action.plugin')
 
 M.actions = vim.tbl_deep_extend("force", {},
-  motion, modify, normal, visual, object, insert, command, control, func, plugin,
+  motion, modify, normal, visual, surround, insert, command, control, func, plugin,
   {})
 
 M.keymap = function(keys)
@@ -31,9 +31,7 @@ M.keymap = function(keys)
     local act = k[2].act
     local mode = k[2].mode
     -- local opts = { desc=k[2].desc, noremap=k[2].noremap }
-    local opts = {}
-    opts.desc = k[2].desc
-    opts.noremap = k[2].noremap
+    local opts = k[2].opts
     -- print( mode, key, act, opts)
     if act and mode then
       vim.keymap.set(mode, key, act, opts)

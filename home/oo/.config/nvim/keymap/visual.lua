@@ -1,7 +1,7 @@
 -- NVIM config,
 
 
-local km  = require("keymap")
+local km  = require("miraction")
 local act = km.actions
 km.setup({
 

@@ -9,7 +9,6 @@ floating_modifier Ctrl
 exec         nice /home/00/autoexec.sh
 exec_always  nice /home/00/autosway.sh
 
-
 input type:keyboard xkb_capslock disabled
 input type:keyboard xkb_numlock  enabled
 

@@ -13,7 +13,6 @@ local packs = {
 
   { 'stevearc/conform.nvim',                    },
   { 'echasnovski/mini.align',                   },
-  { 'echasnovski/mini.surround',                },
 
   { 'saghen/blink.cmp',                         build = 'cargo build --release' },
   { 'rafamadriz/friendly-snippets',             },
@@ -38,7 +37,6 @@ local packs = {
 
 }
   -- { 'neovim/nvim-lspconfig' },
-  -- { 'iamcco/markdown-preview.nvim',             build = 'cd app && yarn install' },
 
 
 return packs

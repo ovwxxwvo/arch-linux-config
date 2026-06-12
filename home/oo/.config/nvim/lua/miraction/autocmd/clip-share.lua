@@ -31,7 +31,7 @@ end
 
 local function paste_share(register)
   -- local reg_name = '+'
-  reg = register
+  local reg = register
   if not reg.name or not reg.file then return end
   local reg_name = reg.name
   local reg_file = reg.file
@@ -43,7 +43,7 @@ end
 
 local function yank_share(register)
   -- local reg_name = '"'
-  reg = register
+  local reg = register
   if not reg.name or not reg.file then return end
   local reg_name = reg.name
   local reg_file = reg.file
@@ -56,14 +56,14 @@ local function yank_share(register)
 end
 
 local function paste_hook()
-  vim.keymap.set({'n', 'x'}, 'po', function() paste_share(reg.unname) return 'p'                      end, { noremap = true, expr = true })
-  vim.keymap.set({'n', 'x'}, 'pp', function() paste_share(reg.unname) return '"'..reg.unname.name..'p'end, { noremap = true, expr = true })
-  vim.keymap.set({'n', 'x'}, 'pu', function() paste_share(reg.yank)   return '"'..reg.yank.name..'p'  end, { noremap = true, expr = true })
-  vim.keymap.set({'n', 'x'}, 'pi', function() paste_share(reg.delete) return '"'..reg.delete.name..'p'end, { noremap = true, expr = true })
-  vim.keymap.set({'n', 'x'}, 'PO', function() paste_share(reg.unname) return 'P'                      end, { noremap = true, expr = true })
-  vim.keymap.set({'n', 'x'}, 'PP', function() paste_share(reg.unname) return '"'..reg.unname.name..'p'end, { noremap = true, expr = true })
-  vim.keymap.set({'n', 'x'}, 'PU', function() paste_share(reg.yank)   return '"'..reg.yank.name..'P'  end, { noremap = true, expr = true })
-  vim.keymap.set({'n', 'x'}, 'PI', function() paste_share(reg.delete) return '"'..reg.delete.name..'P'end, { noremap = true, expr = true })
+  vim.keymap.set({'n','x'}, 'po', function() paste_share(reg.unname) return 'p'                      end, { noremap = true, expr = true })
+  vim.keymap.set({'n','x'}, 'pp', function() paste_share(reg.unname) return '"'..reg.unname.name..'p'end, { noremap = true, expr = true })
+  vim.keymap.set({'n','x'}, 'pu', function() paste_share(reg.yank)   return '"'..reg.yank.name..'p'  end, { noremap = true, expr = true })
+  vim.keymap.set({'n','x'}, 'pi', function() paste_share(reg.delete) return '"'..reg.delete.name..'p'end, { noremap = true, expr = true })
+  vim.keymap.set({'n','x'}, 'PO', function() paste_share(reg.unname) return 'P'                      end, { noremap = true, expr = true })
+  vim.keymap.set({'n','x'}, 'PP', function() paste_share(reg.unname) return '"'..reg.unname.name..'p'end, { noremap = true, expr = true })
+  vim.keymap.set({'n','x'}, 'PU', function() paste_share(reg.yank)   return '"'..reg.yank.name..'P'  end, { noremap = true, expr = true })
+  vim.keymap.set({'n','x'}, 'PI', function() paste_share(reg.delete) return '"'..reg.delete.name..'P'end, { noremap = true, expr = true })
   vim.api.nvim_create_user_command('PasteShareUnname', function() paste_share(reg.unname) end, {})
   vim.api.nvim_create_user_command('PasteShareYank',   function() paste_share(reg.yank  ) end, {})
   vim.api.nvim_create_user_command('PasteShareDelete', function() paste_share(reg.delete) end, {})

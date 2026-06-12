@@ -1,24 +1,27 @@
 # SWAY config,
 
 
-set $appid alacri
-for_window [app_id="$appid"] move scratchpad
+set $appid "alacri"
+for_window [app_id=$appid] move scratchpad
 
-set $appid alotify
-for_window [app_id="$appid"] move scratchpad
+set $appid "alotify"
+for_window [app_id=$appid] move scratchpad
 
-set $appid showkey
-for_window [app_id="$appid"] move scratchpad
+set $appid "showkey"
+for_window [app_id=$appid] move scratchpad
 
-set $appid mpviewer
-for_window [app_id="$appid"] move scratchpad
+set $appid "firefox"
+for_window [app_id=$appid] opacity set 0.98
 
-set $appid firefox
-for_window [app_id="$appid"] opacity set 0.98
+set $title "termfilechooser"
+for_window [title=$title] floating enable
+for_window [title=$title] resize set 80ppt 80ppt
 
-set $title termfilechooser
-for_window [title="$title"] floating enable
-for_window [title="$title"] resize set 80ppt 80ppt
+set $appid "mpviewer"
+for_window [app_id=$appid] move scratchpad
+
+set $title "Peek preview — Mozilla Firefox"
+for_window [title=$title] focus prev
 
 set $appid ''
 set $title ''

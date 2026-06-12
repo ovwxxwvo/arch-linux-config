@@ -16,9 +16,9 @@ local actions = {
   select_inner_paren      = { act = '<C-v>i(',  desc = 'select inner paren     ', },
   select_inner_bracket    = { act = '<C-v>i[',  desc = 'select inner bracket   ', },
   select_inner_brace      = { act = '<C-v>i{',  desc = 'select inner brace     ', },
-  select_inner_less       = { act = '<C-v>i<',  desc = 'select inner less      ', },
   select_inner_quote      = { act = '<C-v>i"',  desc = 'select inner quote     ', },
   select_inner_apostrophe = { act = '<C-v>i\'', desc = 'select inner apostrophe', },
+  select_inner_less       = { act = '<C-v>i<',  desc = 'select inner less      ', },
   select_inner_tag        = { act = '<C-v>it',  desc = 'select inner tag       ', },
 
   select_outer_word       = { act = '<C-v>aw',  desc = 'select outer word      ', },
@@ -27,17 +27,22 @@ local actions = {
   select_outer_paren      = { act = '<C-v>a(',  desc = 'select outer paren     ', },
   select_outer_bracket    = { act = '<C-v>a[',  desc = 'select outer bracket   ', },
   select_outer_brace      = { act = '<C-v>a{',  desc = 'select outer brace     ', },
-  select_outer_less       = { act = '<C-v>a<',  desc = 'select outer less      ', },
   select_outer_quote      = { act = '<C-v>a"',  desc = 'select outer quote     ', },
   select_outer_apostrophe = { act = '<C-v>a\'', desc = 'select outer apostrophe', },
+  select_outer_less       = { act = '<C-v>a<',  desc = 'select outer less      ', },
   select_outer_tag        = { act = '<C-v>at',  desc = 'select outer tag       ', },
 
 }
 
 local mode    = { 'n' }
-for _, v in pairs(actions) do
-  v.mode = mode
-  v.noremap = true
+for _, act in pairs(actions) do
+  act.mode = mode
+  act.opts = {
+    desc = act.desc,
+    noremap = true,
+    -- expr = true,
+    }
+  act.desc = nil
 end
 
 return actions

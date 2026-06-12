@@ -13,9 +13,14 @@ a.open_file_manager.act = function () vim.cmd('update|only|vsplit|wincmd L|Yazi'
 a.run_file.act          = function () vim.cmd('update') require('launcher').launch() end
 
 local mode = { 'n', 'i', 'c', 'x', 's', 'o' }
-for _, v in pairs(actions) do
-  v.mode = mode
-  v.noremap = true
+for _, act in pairs(actions) do
+  act.mode = mode
+  act.opts = {
+    desc = act.desc,
+    noremap = true,
+    -- expr = true,
+    }
+  act.desc = nil
 end
 
 return actions

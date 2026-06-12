@@ -1,10 +1,15 @@
 -- NVIM config,
 
 
+require("miraction.autocmd.clip-share")
+
+
 local M = {}
-M.setup = function()
 
-  require("miraction.action.easy_match")
+local action = require("miraction.action")
+M.actions = action.actions
+M.setup   = action.setup
 
-end
 return M
+
+

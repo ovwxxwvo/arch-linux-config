@@ -4,8 +4,8 @@
 require('peek').setup({
 
   -- app = 'webview',      -- 'webview', 'browser', string or a table of strings
-  -- app = { 'firefox', }, -- 'webview', 'browser', string or a table of strings
-  app = { 'firefox', '--new-window', },
+  -- app = { 'firefox', '--new-window', },
+  app = { 'firefox', '--new-instance', '--profile', '/home/oo/.mozilla/firefox/barless/' },
 
   filetype = { 'markdown' }, -- list of filetypes to recognize as markdown
   theme = 'dark',            -- 'dark' or 'light'

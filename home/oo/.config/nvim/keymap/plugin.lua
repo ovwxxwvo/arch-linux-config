@@ -1,9 +1,13 @@
 -- NVIM config,
 
 
-local km  = require("keymap")
+local km  = require("miraction")
 local act = km.actions
 km.setup({
+
+  -- { "pp",        act.paste_unname       },
+  -- { "pu",        act.paste_yank         },
+  -- { "po",        act.paste_smaller      },
 
   { "H",         act.lsp_hover          },
   { "gr",        act.lsp_references     },
@@ -19,7 +23,6 @@ km.setup({
   { "<C-n>",     act.lsp_rename         },
   { "<Space>f",  act.lsp_format         },
 
-  -- { "<Space>s",  act.mini_surround      },
   { "<Space>a",  act.mini_align         },
   { "<Space>A",  act.mini_align_view    },
 
