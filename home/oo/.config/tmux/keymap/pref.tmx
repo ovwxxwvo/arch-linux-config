@@ -3,7 +3,7 @@
 
 # basic
   bind -T prefix   Escape   copy-mode
-  bind -T prefix   v        run -b '~/.config/tmux/key/paste-clip.sh'
+  # bind -T prefix   v        run -b '~/.config/tmux/key/paste-clip.sh'
   bind -T prefix   F1       run -b '~/.config/tmux/key/open-file.sh'
 
 # tab & win

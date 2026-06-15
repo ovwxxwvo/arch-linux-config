@@ -5,7 +5,7 @@ local M = {}
 M.setup = function()
 
   -- require("")
-  require("autocmd.cmd.clip-share")
+  require("autoload.cmd.sock-listen")
 
 end
 return M

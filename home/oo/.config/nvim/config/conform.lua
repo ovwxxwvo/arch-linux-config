@@ -7,8 +7,8 @@ require("conform").setup({
     lua = { "stylua" },
     python = { "isort", "black" },
     -- rust = { "rustfmt", lsp_format = "fallback" },
-    javascript = { "prettierd", "prettier", stop_after_first = true },
-    typescript = { "prettierd", "prettier", stop_after_first = true },
+    javascript = { "prettier", "prettier", stop_after_first = true },
+    typescript = { "prettier", "prettier", stop_after_first = true },
     html       = { "prettier" },
     css        = { "prettier" },
     json       = { "prettier" },
@@ -30,7 +30,7 @@ require("conform").setup({
 require("mini.align").setup({
 
   mappings = {
-    start = 'ga',
+    start              = 'ga',
     start_with_preview = 'gA'
   }
 

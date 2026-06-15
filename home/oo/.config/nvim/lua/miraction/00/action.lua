@@ -6,13 +6,7 @@
   -- M.s = { 's' } -- Select
   -- M.o = { 'o' } -- Operate
 
-require("miraction.autocmd.clip-share")
-
-
 local M = {}
-
-M.setup   = require("miraction.util").setup
--- M.actions = require("miraction.action").actions
 
 M.actions = vim.tbl_deep_extend("force", {},
   require('miraction.action.motion' ),
@@ -27,5 +21,3 @@ M.actions = vim.tbl_deep_extend("force", {},
   {})
 
 return M
-
-

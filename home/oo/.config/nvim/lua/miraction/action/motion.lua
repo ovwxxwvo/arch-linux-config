@@ -36,15 +36,6 @@ local actions = {
 
 }
 
-local mode = { 'n', 'x', }
-for _, act in pairs(actions) do
-  act.mode = mode
-  act.opts = {
-    desc = act.desc,
-    noremap = true,
-    -- expr = true,
-    }
-  act.desc = nil
-end
+for _, act in pairs(actions) do  act.mode = {'n','x','s','o',}  end
 
 return actions

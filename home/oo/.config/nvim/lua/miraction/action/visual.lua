@@ -1,48 +1,28 @@
 -- NVIM config,
 
-
+act = require('miraction.actfunc')
 local actions = {
 
-  virtual_edit            = { act = ':set ve=all<CR>', desc = 'virtual edit    ', },
-  visual_char             = { act = 'v',        desc = 'visual char            ', },
-  visual_line             = { act = 'V',        desc = 'visual line            ', },
-  visual_block            = { act = '<C-v>',    desc = 'visual block           ', },
+  vis_delete_pairs       = { act = act.vis_delete_pairs,       desc = 'vis_delete_pairs      ', },
 
-  select_all              = { act = '0ggVG',    desc = 'select all             ', },
+  vis_insert_parens      = { act = act.vis_insert_parens     , desc = 'vis_insert_parens     ', },
+  vis_insert_brackets    = { act = act.vis_insert_brackets   , desc = 'vis_insert_brackets   ', },
+  vis_insert_braces      = { act = act.vis_insert_braces     , desc = 'vis_insert_braces     ', },
+  vis_insert_quotes      = { act = act.vis_insert_quotes     , desc = 'vis_insert_quotes     ', },
+  vis_insert_apostrophes = { act = act.vis_insert_apostrophes, desc = 'vis_insert_apostrophes', },
+  vis_insert_angbkts     = { act = act.vis_insert_angbkts    , desc = 'vis_insert_angbkts    ', },
+  vis_insert_tags        = { act = act.vis_insert_tags       , desc = 'vis_insert_tags       ', },
 
-  select_inner_word       = { act = '<C-v>iw',  desc = 'select inner word      ', },
-  select_inner_sent       = { act = '<C-v>is',  desc = 'select inner sent      ', },
-  select_inner_para       = { act = '<C-v>ip',  desc = 'select inner para      ', },
-  select_inner_paren      = { act = '<C-v>i(',  desc = 'select inner paren     ', },
-  select_inner_bracket    = { act = '<C-v>i[',  desc = 'select inner bracket   ', },
-  select_inner_brace      = { act = '<C-v>i{',  desc = 'select inner brace     ', },
-  select_inner_quote      = { act = '<C-v>i"',  desc = 'select inner quote     ', },
-  select_inner_apostrophe = { act = '<C-v>i\'', desc = 'select inner apostrophe', },
-  select_inner_less       = { act = '<C-v>i<',  desc = 'select inner less      ', },
-  select_inner_tag        = { act = '<C-v>it',  desc = 'select inner tag       ', },
-
-  select_outer_word       = { act = '<C-v>aw',  desc = 'select outer word      ', },
-  select_outer_sent       = { act = '<C-v>as',  desc = 'select outer sent      ', },
-  select_outer_para       = { act = '<C-v>ap',  desc = 'select outer para      ', },
-  select_outer_paren      = { act = '<C-v>a(',  desc = 'select outer paren     ', },
-  select_outer_bracket    = { act = '<C-v>a[',  desc = 'select outer bracket   ', },
-  select_outer_brace      = { act = '<C-v>a{',  desc = 'select outer brace     ', },
-  select_outer_quote      = { act = '<C-v>a"',  desc = 'select outer quote     ', },
-  select_outer_apostrophe = { act = '<C-v>a\'', desc = 'select outer apostrophe', },
-  select_outer_less       = { act = '<C-v>a<',  desc = 'select outer less      ', },
-  select_outer_tag        = { act = '<C-v>at',  desc = 'select outer tag       ', },
+  -- vis_insert_parens      = { act = 'c(<C-r>")<ESC>',   desc = 'vis_insert_parens     ', },
+  -- vis_insert_brackets    = { act = 'c[<C-r>"]<ESC>',   desc = 'vis_insert_brackets   ', },
+  -- vis_insert_braces      = { act = 'c{<C-r>"}<ESC>',   desc = 'vis_insert_braces     ', },
+  -- vis_insert_quotes      = { act = 'c"<C-r>""<ESC>',   desc = 'vis_insert_quotes     ', },
+  -- vis_insert_apostrophes = { act = 'c\'<C-r>"\'<ESC>', desc = 'vis_insert_apostrophes', },
+  -- vis_insert_angbkts     = { act = 'c<<C-r>"><ESC>',   desc = 'vis_insert_angbkts    ', },
+  -- vis_insert_tags        = { act = 'c<<C-r>"><ESC>',   desc = 'vis_insert_tags       ', },
 
 }
 
-local mode    = { 'n' }
-for _, act in pairs(actions) do
-  act.mode = mode
-  act.opts = {
-    desc = act.desc,
-    noremap = true,
-    -- expr = true,
-    }
-  act.desc = nil
-end
+for _, act in pairs(actions) do  act.mode = {'x','s',}  end
 
 return actions

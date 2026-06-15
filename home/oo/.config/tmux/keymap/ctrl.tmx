@@ -3,7 +3,7 @@
 
 # basic
   bind -n    M-Escape   copy-mode
-  bind -n    C-v        run -b '~/.config/tmux/key/paste-clip.sh'
+  # bind -n    C-v        run -b '~/.config/tmux/key/paste-clip.sh'
   bind -n    F1         run -b '~/.config/tmux/key/open-file.sh'
 
 # tab & win

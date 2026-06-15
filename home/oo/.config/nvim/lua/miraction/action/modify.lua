@@ -1,7 +1,7 @@
 -- NVIM config,
 
 
-local actions               = {
+local actions = {
 
   insert_char_beg   = { act = 'i',     desc = 'insert char beg   ', },
   insert_char_end   = { act = 'a',     desc = 'insert char end   ', },
@@ -25,15 +25,6 @@ local actions               = {
 
 }
 
-local mode = { 'n', 'x', }
-for _, act in pairs(actions) do
-  act.mode = mode
-  act.opts = {
-    desc = act.desc,
-    noremap = true,
-    -- expr = true,
-    }
-  act.desc = nil
-end
+for _, act in pairs(actions) do  act.mode = {'n','x','s',}  end
 
 return actions
