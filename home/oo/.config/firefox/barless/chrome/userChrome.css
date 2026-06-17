@@ -1,12 +1,3 @@
-#titlebar{display:none!important}
-#TabsToolbar{visibility:collapse!important;height:0!important}
-#nav-bar{visibility:collapse!important;height:0!important}
-#PersonalToolbar{visibility:collapse!important;height:0!important}
-#sidebar-header{visibility:collapse!important}
-#downloads-button{display:none!important}
-#identity-box{display:none!important}
-#tracking-protection-icon-container{display:none!important}
-.urlbar-wrapper{display:none!important}
-#PanelUI-button{display:none!important}
-#back-button,#forward-button,#reload-button,#stop-button{display:none!important}
-:root{--tabbar-height:0px!important;--nav-bar-height:0px!important}
+
+@import url(chrome/barless.css);
+

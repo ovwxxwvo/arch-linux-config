@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-CN">
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <style>
+
+      * {
+        margin:  0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+
+      :root {
+        --body-background       : #f9f9fb;
+        --search-bar-background : #f0f0f0;
+        --search-icon-color     : #000000;
+        --shortcut-color        : #000000;
+        --footer-color          : #808080;
+
+        --container-gap         :  8vh;
+
+        --browser-icon-size     :  12vh;
+
+        --search-bar-width      : 48vw;
+        --search-bar-height     :  6vh;
+        --search-bar-radius     :  4vh;
+        --search-bar-font-size  :  3vh;
+
+        --shortcut-gap          :  4vw;
+        --shortcut-size         :  8vh;
+        --shortcut-radius       :  2vh;
+        --shortcut-font-size    :  2vh;
+
+        --footer-bottom         :  4vh;
+        --footer-font-size      :  2vh;
+
+        --search-url:  https://www.bing.com/search?q=;
+      }
+
+      body {
+        display    : grid;
+        align-items: center;
+        min-height : 100vh;
+        padding    : 1vh;
+        margin     : 0vh;
+        background: var(--body-background);
+      }
+
+      .container{
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        gap: var(--container-gap);
+      }
+
+      .space {
+        width:  12vh;
+        height: 12vh;
+      }
+
+      .browser-icon {
+        width:  var(--browser-icon-size);
+        height: var(--browser-icon-size);
+      }
+
+      .search-bar {
+        position       : relative;
+        display        : flex;
+        justify-content: center;
+        width          : 100%;
+      }
+
+      .search-bar input {
+        outline      : none;
+        border       : none;
+        padding      : 0 4vh 0 4vh;
+        box-shadow   : 0 1vh 2vh rgba(0, 0, 0, 0.2);
+        width        : var(--search-bar-width);
+        height       : var(--search-bar-height);
+        border-radius: var(--search-bar-radius);
+        font-size    : var(--search-bar-font-size);
+        background   : var(--search-bar-background);
+      }
+
+      .search-bar .icon {
+        position : absolute;
+        top      : 50%;
+        left     : 2vh;
+        font-size: 4vh;
+        color    : var(--search-icon-color);
+      }
+
+      .shortcuts {
+        display        : flex;
+        flex-wrap      : wrap;
+        justify-content: center;
+        gap            : var(--shortcut-gap);
+      }
+
+      .shortcut {
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        text-decoration: none;
+        gap            : 2vh;
+        box-shadow     : 0 2vh 4vh rgba(0, 0, 0, 0.4);
+        border-radius  : 2vh;
+        font-size      : var(--shortcut-font-size);
+        color          : var(--shortcut-color);
+      }
+      .shortcut .icon {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        overflow       : hidden;
+        box-shadow     : 0 1vh 2vh rgba(0, 0, 0, 0.8);
+        border-radius  : var(--shortcut-radius);
+        width          : var(--shortcut-size);
+        height         : var(--shortcut-size);
+      }
+      .shortcut .icon img {
+        object-fit: contain;
+        width     : 100%;
+        height    : 100%;
+      }
+
+      .footer {
+        position  : fixed;
+        text-align: center;
+        bottom    : var(--footer-bottom);
+        font-size : var(--footer-font-size);
+        color     : var(--footer-color);
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <img class="browser-icon"
+        src="https://www.firefox.com/media/img/logos/firefox/firefox-logo.b030cd103a84.svg"
+        alt="Firefox"
+      />
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search the web ..." />
+      </div>
+
+      <div class="shortcuts">
+
+        <!-- <a class="shortcut" href=""> -->
+          <!-- <div class="icon"><img src=""></div> -->
+          <!-- <span></span> -->
+        <!-- </a> -->
+
+        <a class="shortcut" href="https://www.doubao.com/chat">
+          <div class="icon"><img src="https://shp.qpic.cn/ma_icon/0/icon_200451591_1780469389/0"></div>
+          <span>DouBao</span>
+        </a>
+
+        <a class="shortcut" href="https://www.baidu.com">
+          <div class="icon"><img src="https://pp.myapp.com/ma_icon/0/icon_4859_1777455179/256"></div>
+          <span>Baidu</span>
+        </a>
+
+        <a class="shortcut" href="https://www.alipan.com/drive/file/all">
+          <div class="icon"><img src="https://pp.myapp.com/ma_icon/0/icon_54120208_1777366339/256"></div>
+          <span>AliPan</span>
+        </a>
+
+        <a class="shortcut" href="https://wx.mail.qq.com">
+          <div class="icon"><img src="https://pp.myapp.com/ma_icon/0/icon_1129680_1778489755/256"></div>
+          <span>QQMail</span>
+        </a>
+
+        <a class="shortcut" href="https://www.bilibili.com">
+          <div class="icon"><img src="https://shp.qpic.cn/ma_icon/0/icon_200441319_1780623467/0"></div>
+          <span>BiliBili</span>
+        </a>
+
+      </div>
+
+    <div class="space"></div>
+
+    <div class="footer">Hello World</div>
+
+    <script>
+      const searchInput = document.querySelector(".search-box input");
+      searchInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          const keyword = this.value.trim();
+          if (keyword) {
+            const searchUrl = getComputedStyle(document.documentElement)
+              .getPropertyValue("--search-url")
+              .replace(/"/g, "")
+              .trim();
+            window.open(searchUrl + encodeURIComponent(keyword));
+            this.value = "";
+          }
+        }
+      });
+    </script>
+
+  </body>
+
+</html>
+

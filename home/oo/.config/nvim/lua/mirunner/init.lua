@@ -10,7 +10,7 @@ local pack_dir  = vim.fn.fnamemodify(pack_file, ":h")
 local M = {}
 
 M.launch = function(spec)
-  local spec = spec or require("launcher.exts")
+  local spec = spec or require("mirunner.exts")
   local ext = vim.fn.expand("%:e")
 
   for _, s in ipairs(spec) do

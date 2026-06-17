@@ -1,0 +1,22 @@
+
+#navigator-toolbox[customizing]{ display:-moz-box; -moz-box-orient:vertical;   }
+#navigator-toolbox             { display:grid; grid-template-columns:50vw auto;}
+#navigator-toolbox > *         { grid-column:1/-1;          }
+#nav-bar                       { grid-column:1; grid-row:1; }
+#TabsToolbar                   { grid-column:2; grid-row:1; }
+#nav-bar,#TabsToolbar          { min-height: 4vh;           }
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+#sidebar-button            { display: none !important; }
+#home-button               { display: none !important; }
+#back-button               { display: none !important; }
+#forward-button            { display: none !important; }
+#firefox-view-button       { display: none !important; }
+#new-tab-button            { display: none !important; }
+#alltabs-button            { display: none !important; }
+#titlebar-close            { display: none !important; }
+#import-button             { display :none !important; }
+#bookmarks-menu-button     { display :flex !important; }
+#unified-extensions-button { display: flex !important; }
+#fxa-toolbar-menu-button   { display: flex !important; }
+

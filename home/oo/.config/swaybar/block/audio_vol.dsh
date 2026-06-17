@@ -9,8 +9,9 @@ OF="$ICON_OF"
 
 
 # SINK=$( pactl get-default-sink )
-VOL_MUTE=$( pactl get-sink-volume @DEFAULT_SINK@ \
-  | grep -c 'yes' \
+VOL_MUTE=$( pactl get-sink-mute @DEFAULT_SINK@ \
+  | grep -Eo "Mute: .+" \
+  | grep -c "yes"
   )
 VOL_BLNC=$( pactl get-sink-volume @DEFAULT_SINK@ \
   | grep -Eo "balance .+" \

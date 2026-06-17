@@ -1,0 +1,16 @@
+
+/* 隐藏窗口标题栏（最小化/最大化/关闭按钮行） */
+#titlebar       {display:none!important}
+
+/* 隐藏侧边栏，高度置零消除占位空白 */
+#sidebar-main   {display:none!important}
+
+/* 隐藏标签栏，高度置零消除占位空白 */
+#TabsToolbar    {visibility:collapse!important; height:0!important}
+
+/* 隐藏导航栏，高度置零消除占位空白 */
+#nav-bar        {visibility:collapse!important; height:0!important}
+
+/* 隐藏书签栏，高度置零消除占位空白 */
+#PersonalToolbar{visibility:collapse!important; height:0!important}
+

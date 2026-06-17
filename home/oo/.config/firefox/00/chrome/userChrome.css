@@ -1,17 +1,3 @@
-/* Firefox config, */
 
-
-/* Import your desired components first */
-
-  /* @import url(chrome/navbar_tabs_oneliner.css     ); */
-  /* @import url(chrome/tabs_fill_available_width.css); */
-
-  /* @import url(chrome/urlbar_visible_on_active_tab_click.css); */
-  /* @import url(chrome/autohide_toolbox.css                  ); */
-
-  @import url(chrome/combined_tabs_and_main_toolbars.css);
-  @import url(chrome/autohide_navigation_button.css     );
-
-/* Apply your custom modifications after imports */
-
+@import url(chrome/nav-tab-oneline.css);
 

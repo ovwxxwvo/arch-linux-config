@@ -1,0 +1,33 @@
+" General Settings
+set update.lastchecktime 1781537081612
+set configversion 2.0
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
+
+set hintchars qwerasdfzxcv
+
+bind k  scrollline -2
+bind l  scrollline  2
+bind i  scrollpage -0.4
+bind o  scrollpage  0.4
+bind gg scrollline -1000
+bind G  scrollline  1000
+
+bind x  tabclose
+bind ,  tabprev
+bind .  tabnext
+
+bind a  focusinput
+bind s  focusinput
+
+bind ?  find
+bind h  findnext
+bind n  findnext --reverse
+
+bind t  fillcmdline buffer
+bind b  fillcmdline bmarks
+
+bind w  fullscreen
+bind e  source
+

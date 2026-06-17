@@ -75,16 +75,15 @@ show_block() {
   }
 
 while true; do
-sleep 1
-  ITF_COUNT=$( ip addr \
-    | grep -c ' state UP ' \
-    )
-  if [ $ITF_COUNT -ne 1 ]; then
+  sleep 1
+  WLAN_UP=$( ip addr |grep -c ' state UP ' )
+  # echo $WLAN_UP
+  if [ $WLAN_UP -eq 1 ]; then
+    get_data
+    show_block
+  else
     echo $LABEL
-    break
-    fi
-get_data
-show_block
+  fi
 done
 
 
