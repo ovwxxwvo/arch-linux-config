@@ -1,76 +1,54 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env dash
 
 block="$HOME/.config/swaybar/block"
 . "$block"/icon.sh
 . "$block"/color.sh
 LABEL="$ICON_SAMBA"
 
-
-LIST=('
+LIST="
+  MR-00   | oo | 1234567890 | 3.0
+  HONOR-0 | oo | 1234567890 | 1.0
   HW-00   | oo | 1234567890 | 1.0
   VBOX-00 | oo | 1234567890 | 3.0
-  ')
-  # MR-00   | oo | 1234567890 | 3.0
-HOSTS=(` echo "$LIST" |awk -F"[\t |]+" '{print $2}' `)
-IPS=();   for i in {1..5} ;do
-  IPS=(` for h in ${HOSTS[@]} \
-    ; do \
-    nmblookup -S $h \
-    | grep -Eo "^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+" \
-    ; done \
-    `)
+  "
+HOSTS=$(echo "$LIST" |grep '|' |awk -F"[\t |]+" '{print $2}')
+# echo $HOSTS
+
+IPS=""
+for h in $HOSTS; do
+  ip=$(nmblookup -S "$h" | grep -Eo '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+  # echo $ip
+  if [ -n "$ip" ]; then IPS="$IPS $ip"; fi
   done
-HOSTS=(); for i in {1..5} ;do
-  HOSTS=(` for ip in ${IPS[@]} \
-    ; do \
-    nmblookup -A $ip \
-    |grep -EA1 "status" \
-    |grep -v "status" \
-    |awk '{print $1}' \
-    ; done \
-    `)
+HOSTS=""
+for ip in $IPS; do
+  host=$(nmblookup -A "$ip" |grep -EA1 "status" |grep -v "status" |awk '{print $1}')
+  # echo $host
+  if [ -n "$host" ]; then HOSTS="$HOSTS $host"; fi
   done
 # echo ---------- ----------
-  # echo HOSTS ${HOSTS[@]}
-  # echo IPS   ${#IPS[@]}   ${IPS[@]}   ${!IPS[@]}
-  # echo HOSTS ${#HOSTS[@]} ${HOSTS[@]} ${!HOSTS[@]}
+  # echo "IPS   $IPS  "
+  # echo "HOSTS $HOSTS"
 
-ENABLE=$( for h in ${HOSTS[@]} ; do \
-    nmblookup -S $h \
-    | grep -Eo "^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+" \
-    ; done \
-  |grep -Ec "^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+" \
-  |grep -Ec "[1-9]" \
-  )
-ACTIVE=$( mount \
-  |grep -E "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+" \
-  |grep -Ec "$MNT" \
-  |grep -Ec "[1-9]" \
-  )
+ENABLE=$(echo $IPS | wc -w)
+ACTIVE=$(mount | grep -cE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+.*'"$MNT")
 # echo ---------- ----------
 # echo $ENABLE $ACTIVE
 
-
 show_block() {
-  # if [ $ENABLE -eq 0 ]; then return; fi
-  if [ $ACTIVE -eq 1 ]; then
-    BLOCK=" $LABEL"
-  else
-    BLOCK=""
-  fi
-  echo "$BLOCK"
-  echo "$BLOCK"
+    if [ "$ACTIVE" -eq 1 ]; then
+        echo " $LABEL"
+    else
+        echo ""
+    fi
   }
 
 show_color() {
-  if [ $ACTIVE -eq 1 ]; then
-    echo $c_lelt
-  fi
+    if [ "$ACTIVE" -eq 1 ]; then
+        echo "$c_lelt"
+    fi
   }
-
 
 show_block
 show_color
-
 

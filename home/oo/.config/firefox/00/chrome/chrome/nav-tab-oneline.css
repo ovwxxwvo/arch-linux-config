@@ -1,10 +1,14 @@
 
-#navigator-toolbox[customizing]{ display:-moz-box; -moz-box-orient:vertical;   }
-#navigator-toolbox             { display:grid; grid-template-columns:50vw auto;}
-#navigator-toolbox > *         { grid-column:1/-1;          }
-#nav-bar                       { grid-column:1; grid-row:1; }
-#TabsToolbar                   { grid-column:2; grid-row:1; }
-#nav-bar,#TabsToolbar          { min-height: 4vh;           }
+#titlebar     { display:none!important }
+#sidebar-main { display:none!important }
+
+#navigator-toolbox[customizing]{ display:-moz-box; -moz-box-orient:vertical;    }
+#navigator-toolbox             { display:grid; grid-template-columns:50vw auto; }
+#navigator-toolbox > *         { grid-column:1/-1;          font-size: 1.2vh    }
+#nav-bar                       { grid-column:1; grid-row:1; font-size: 1.6vh    }
+#TabsToolbar                   { grid-column:2; grid-row:1; font-size: 1.6vh    }
+#nav-bar,#TabsToolbar          { display:flex; align-items:center; height:2.8vh }
+
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 #sidebar-button            { display: none !important; }

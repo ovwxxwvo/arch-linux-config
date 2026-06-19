@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env dash
 
 
 block="$HOME/.config/swaybar/block"

@@ -7,19 +7,31 @@ set configversion 2.0
 
 set hintchars qwerasdfzxcv
 
-bind k  scrollline -2
-bind l  scrollline  2
+set smoothscroll   true
+set scrollrepeat   2
+set scrollduration 16
+command scrollUp   js window.scrollBy({top:-120,behavior:"smooth"})
+command scrollDown js window.scrollBy({top: 120,behavior:"smooth"})
+
+unbind <ESC>
+unbind q
+unbind f
+
+bind k  scrollUp
+bind l  scrollDown
 bind i  scrollpage -0.4
 bind o  scrollpage  0.4
 bind gg scrollline -1000
 bind G  scrollline  1000
 
-bind x  tabclose
 bind ,  tabprev
 bind .  tabnext
 
-bind a  focusinput
+bind x  tabclose
+bind z  hint
 bind s  focusinput
+bind a  focusinput
+bind c  source
 
 bind ?  find
 bind h  findnext
@@ -27,7 +39,8 @@ bind n  findnext --reverse
 
 bind t  fillcmdline buffer
 bind b  fillcmdline bmarks
+bind B  tabopen bmarks
 
-bind w  fullscreen
-bind e  source
+bind w  tabopen file:///home/oo/.config/firefox/00/home.html
+bind e  tabopen about:preferences
 

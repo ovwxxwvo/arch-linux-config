@@ -1,3 +1,4 @@
+
 # ---------------------
   unmapAll
   map  H 		  showHelp
@@ -60,5 +61,4 @@
   map  B 		  Vomnibar.activateBookmarks
   map  D      Vomnibar.activate
   map  E      Vomnibar.activateEditUrl
-
 
