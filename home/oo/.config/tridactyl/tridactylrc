@@ -16,6 +16,7 @@ command scrollDown js window.scrollBy({top: 120,behavior:"smooth"})
 unbind <ESC>
 unbind q
 unbind f
+unbind F
 
 bind k  scrollUp
 bind l  scrollDown
@@ -27,11 +28,12 @@ bind G  scrollline  1000
 bind ,  tabprev
 bind .  tabnext
 
+bind c  source
 bind x  tabclose
 bind z  hint
+bind Z  hint -b
 bind s  focusinput
 bind a  focusinput
-bind c  source
 
 bind ?  find
 bind h  findnext

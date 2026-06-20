@@ -4,9 +4,13 @@
 ########################################
 
 
-/home/00/autoboot/part.sh
+root_dir=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
+echo $root_dir
+echo ======== ======== ======== ========
 
-/home/00/autoboot/lock.sh
-/home/00/autoboot/color.sh
+${root_dir}/autoboot/part.sh
+
+${root_dir}/autoboot/lock.sh
+${root_dir}/autoboot/color.sh
 
 

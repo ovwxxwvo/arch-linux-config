@@ -14,6 +14,6 @@ set  plugin  "$HOME/.config/fish/plugins"
 source $plugin/misty.fish/init.fish
 
 
-source  /home/00/autoshll.sh
+source  /home/00/autoshll/alias.sh
 
 

@@ -4,6 +4,8 @@
 ########################################
 
 
-source /home/00/autoload/alias.sh
+# root_dir=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
+
+# source ${root_dir}/autoshll/alias.sh
 
 

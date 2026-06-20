@@ -4,11 +4,13 @@
 ########################################
 
 
-/home/00/autosway/kill.sh
+root_dir=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
 
-/home/00/autosway/sway.sh &
-/home/00/autosway/sfwr.sh &
+${root_dir}/autosway/kill.sh
 
-/home/00/autosway/rest.sh &
+${root_dir}/autosway/sway.sh &
+${root_dir}/autosway/sfwr.sh &
+
+${root_dir}/autosway/rest.sh &
 
 

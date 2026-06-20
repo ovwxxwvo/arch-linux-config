@@ -4,14 +4,16 @@
 ########################################
 
 
-/home/00/autoexec/sway.sh &
-/home/00/autoexec/mode.sh &
+root_dir=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
 
-# /home/00/autoexec/kill.sh
+${root_dir}/autoexec/sway.sh &
+${root_dir}/autoexec/mode.sh &
+
+# ${root_dir}/autoexec/kill.sh
 #
-# /home/00/autoexec/sway.sh &
-# /home/00/autoexec/sfwr.sh &
+# ${root_dir}/autoexec/sway.sh &
+# ${root_dir}/autoexec/sfwr.sh &
 #
-# /home/00/autoexec/rest.sh &
+# ${root_dir}/autoexec/rest.sh &
 
 

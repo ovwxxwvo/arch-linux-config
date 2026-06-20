@@ -4,8 +4,11 @@
 ########################################
 
 
-source /home/00/autoload/export.sh
+root_dir=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
 
-source /home/00/autoload/term.sh
+source ${root_dir}/autoload/export.sh
+source ${root_dir}/autoshll/path.sh
+
+source ${root_dir}/autoload/term.sh
 
 
