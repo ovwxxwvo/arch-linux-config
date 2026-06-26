@@ -107,8 +107,8 @@
 
   # find
   	{ on = [ "f","f" ], run = "filter --smart"                 , desc = "filter files" },
-  	{ on = [ "f","g" ], run = "search rg"                      , desc = "find files using ripgrep by cont" },
-  	{ on = [ "f","d" ], run = "search fd"                      , desc = "find files using fd by name"      },
+  	{ on = [ "f","g" ], run = "search --via=rg"                , desc = "find files using ripgrep by cont" },
+  	{ on = [ "f","d" ], run = "search --via=fd"                , desc = "find files using fd by name"      },
   	{ on = [ "f","z" ], run = "plugin fzf"                     , desc = "find files using fzf by name"     },
   	{ on = [ "f","x" ], run = "plugin zoxide"                  , desc = "find files using zoxide by name"  },
 

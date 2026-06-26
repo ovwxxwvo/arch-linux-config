@@ -35,7 +35,8 @@ bind Z  hint -b
 bind s  focusinput
 bind a  focusinput
 
-bind ?  find
+bind /  fillcmdline find
+bind ?  fillcmdline find
 bind h  findnext
 bind n  findnext --reverse
 

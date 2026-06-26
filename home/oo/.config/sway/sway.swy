@@ -14,5 +14,6 @@ input type:keyboard xkb_numlock  enabled
 
 output "YCT Sculptor 0x30305153" mode 2560x1440 scale 1.4
 output "*" bg "/data/32_image/wallpaper/00.jpg" fill
+# output "*" bg "/data/32_image/wallpaper/vivian.jpg" fill
 
 

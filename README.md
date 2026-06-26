@@ -49,7 +49,7 @@ login manager     : lemurs        <- lightdm
 window compositor : sway(wayland) <- i3(x11) + picom  
 terminal emulator : alacritty  
 term multiplexer  : tmux  
-command shell     : fish+bash+dash  
+command shell     : fish+dash+bash  
 file manager      : yazi          <- joshuto <- ranger  
 text editor       : nvim          <- vim  
 media player      : mpv  

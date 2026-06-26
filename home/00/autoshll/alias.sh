@@ -1,6 +1,8 @@
 # ALIAS config,
 
 
+alias  cc='cd "$(find . -type d 2>/dev/null |fzf || return)"'
+
 alias  ff='fish'
 alias  rr='yazi'
 alias  vv='nvim'
