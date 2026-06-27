@@ -6,6 +6,7 @@
   bind --user  \cq  exit
   bind --user  \cz  undo
   bind --user  \cr  echo\ -n\ \(clear\ \|\ string\ replace\ \\e\\\[3J\ \"\"\)\;\ commandline\ -f\ repaint
+  bind --user  \cv  fish_clipboard_paste
 
 # key move
   bind --user  \ca  beginning-of-line

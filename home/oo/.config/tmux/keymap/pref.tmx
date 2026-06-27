@@ -3,11 +3,11 @@
 
 # basic
   bind -T prefix   Escape   copy-mode
-  # bind -T prefix   v        run -b '~/.config/tmux/key/paste-clip.sh'
-  bind -T prefix   F1       run -b '~/.config/tmux/key/open-file.sh'
+  bind -T prefix   F1       run -b '~/.config/tmux/action/open-file.sh'
+  bind -T prefix   v        run -b '~/.config/tmux/action/paste-clip.sh'
 
 # tab & win
-  bind -T prefix   q        run -b "~/.config/tmux/key/exit-cmd.sh"
+  bind -T prefix   q        run -b "~/.config/tmux/action/exit-cmd.sh"
   bind -T prefix   Space    select-pane -R
   bind -T prefix   "'"      rotate-window
   bind -T prefix   m        new-window

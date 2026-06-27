@@ -3,11 +3,11 @@
 
 # basic
   bind -n    M-Escape   copy-mode
-  # bind -n    C-v        run -b '~/.config/tmux/key/paste-clip.sh'
-  bind -n    F1         run -b '~/.config/tmux/key/open-file.sh'
+  bind -n    F1         run -b '~/.config/tmux/action/open-file.sh'
+  bind -n    C-v        run -b '~/.config/tmux/action/paste-clip.sh'
 
 # tab & win
-  bind -n    C-q        run -b '~/.config/tmux/key/exit-cmd.sh'
+  bind -n    C-q        run -b '~/.config/tmux/action/exit-cmd.sh'
   bind -n    C-Space    select-pane -R
   bind -n    M-\"       rotate-window
   bind -n    M-M        new-window
