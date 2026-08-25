@@ -68,6 +68,7 @@ hdd : ZhiTai PCIe Gen4X4 7000MB/s  (1T+1T) (Raid0)
 MECHREVO 无界s mini  
 ```  
 
+----  
 **-- lemurs**  
 ![screenshot](https://cdn.jsdelivr.net/gh/ovwxxwvo/img-bed@main/00_lemurs/misty-lemurs.png)  
 **-- tmux**  

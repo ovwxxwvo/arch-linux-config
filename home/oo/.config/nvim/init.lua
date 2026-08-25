@@ -22,12 +22,13 @@ pdofile(keymap .. "fnkey.lua"  )
 
 prequire("packadd").setup()
 local config = nvim .. "/config/"
-pdofile(config .. "conform.lua"  )
 pdofile(config .. "blinkcmp.lua" )
 pdofile(config .. "telescope.lua")
+pdofile(config .. "minialign.lua")
 pdofile(config .. "peek.lua"     )
 pdofile(config .. "lualine.lua"  )
--- pdofile(config .. "noice.lua"    )
+pdofile(config .. "noice.lua"    )
+-- pdofile(config .. "conform.lua"  )
 pdofile(keymap .. "plugin.lua")
 
 prequire("misty")

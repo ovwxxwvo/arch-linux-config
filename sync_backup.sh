@@ -12,8 +12,8 @@ USR="$USER"
 GRP="$USR"
 # OPT='-vur --progress --no-perms --no-owner --no-group --delete --exclude=".git" --exclude=".venv"'
 OPT='-vcrl --progress --no-perms --no-owner --no-group --delete --exclude=".git" --exclude=".venv" --dry-run'
-SRC="/0000/HH¦DATA/"
-DST="/0000/UD¦BACKUP/"
+SRC="/0000/HH_DATA/"
+DST="/0000/UD_BACKUP/"
 DIRS=(
   '01_cipher'
   '02_config'

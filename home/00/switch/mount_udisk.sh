@@ -2,7 +2,7 @@
 
 
 MNT="/0000"
-PRE="UD¦"
+PRE="UD|"
 echo ---------- ----------
 echo $MNT $PRE
 

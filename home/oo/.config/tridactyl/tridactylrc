@@ -1,10 +1,10 @@
 " General Settings
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
 set update.lastchecktime 1781537081612
 set configversion 2.0
 
-" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
-" vim: set filetype=tridactyl
-
+colorscheme misty
 set hintchars qwerasdfzxcv
 
 set smoothscroll   true

@@ -13,8 +13,6 @@ alias  ra='yazi'
 alias  office='onlyoffice-desktopeditors'
 # alias  onlyoffice='onlyoffice-desktopeditors'
 
-alias  opencode='/home/oo/.opencode/bin/opencode'
-
 alias  baidunetdisk='/home/program/application/baidunetdisk/opt/baidunetdisk/baidunetdisk'
 
 # alias get_idf=". $HOME/esp/esp-idf/export.sh"

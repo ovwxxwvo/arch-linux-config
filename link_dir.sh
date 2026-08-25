@@ -15,8 +15,8 @@ dir_names=(
   '42_data'
   '43_download'
   )
-_dir_uefi='/0000/AA¦UEFI'
-_dir_data='/0000/HH¦DATA'
+_dir_uefi='/0000/AA_UEFI'
+_dir_data='/0000/HH_DATA'
 dir_uefi='/uefi'
 dir_data='/data'
 dir_home='/home'
@@ -51,6 +51,7 @@ link_folder() {
     echo "$src_name $dst_name"
     [   -d "$src" ] || continue
     [ ! -d "$dst" ] || continue
+    # sudo ln -snf  "$src"  "$dst"
     ln -snf  "$src"  "$dst"
     echo "ln -snf $src $dst"
     done

@@ -12,7 +12,8 @@ exec_always  nice /home/00/autosway.sh
 input type:keyboard xkb_capslock disabled
 input type:keyboard xkb_numlock  enabled
 
-output "YCT Sculptor 0x30305153" mode 2560x1440 scale 1.4
+output "AOC Q3279WG5B 0x00000B05" mode 2560x1440 scale 1.2
+output "YCT Sculptor 0x30305153"  mode 2560x1440 scale 1.4
 output "*" bg "/data/32_image/wallpaper/00.jpg" fill
 # output "*" bg "/data/32_image/wallpaper/vivian.jpg" fill
 

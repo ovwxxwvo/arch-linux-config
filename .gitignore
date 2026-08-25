@@ -1,32 +1,7 @@
 # git ignore
 
 
-# Bash/Lua通用杂项
-*~
-*.swp
-.DS_Store
+.aur/
+**/.aur/
 
-# Python
-*.py[cod]
-*.so
-__pycache__/
-.venv/
-venv/
-dist/
-build/
-*.egg-info/
-
-# Rust
-target/
-Cargo.lock
-*.rs.bk
-
-# C/C++
-*.o
-*.obj
-*.a
-*.so
-*.dll
-build/
-cmake-build-*/
 

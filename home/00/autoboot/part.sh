@@ -23,7 +23,7 @@ mnt_part() {
   for m in "${LIST[@]}" ;do
     mnt=$( echo $m \
       |awk -F'[\t |]+' -v root="$ROOT" \
-        '{printf "mount --onlyonce -L %s %s/%s¦%s -o %s\n", $2,root,$1,$2,$3}'
+        '{printf "mount --onlyonce -L %s %s/%s_%s -o %s\n", $2,root,$1,$2,$3}'
       )
     echo $mnt
     eval $mnt

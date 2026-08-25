@@ -81,7 +81,8 @@ M.lsp_definition     = require('vim.lsp.buf').definition
 M.lsp_typedef        = require('vim.lsp.buf').type_definition
 M.lsp_implementation = require('vim.lsp.buf').implementation
 M.lsp_rename         = require('vim.lsp.buf').rename
-M.lsp_format         = require('vim.lsp.buf').format
+-- M.lsp_format         = require('vim.lsp.buf').format
+M.lsp_format         = require('mirormat').format
 
 return M
 

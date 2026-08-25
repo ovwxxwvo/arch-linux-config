@@ -8,7 +8,7 @@ LABEL="$ICON_BLK"
 
 
 USAGE=$( df \
-  | grep ' /0000/HH¦DATA$' \
+  | grep 'DATA$' \
   | grep -Eo "[0-9]+%" \
   | grep -Eo "[0-9]+" \
   )

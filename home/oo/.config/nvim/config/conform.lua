@@ -13,6 +13,16 @@ require("conform").setup({
     css        = { "prettier" },
     json       = { "prettier" },
     vue        = { "prettier" },
+    meson      = { "meson_fmt" },
+    -- meson      = { "meson build" },
+    },
+
+    formatters = {
+      meson_fmt = {
+        cmd = "meson",
+        args = { "format", "-i" },
+        stdin = true,
+      },
     },
 
   default_format_opts = {

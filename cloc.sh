@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
 
-# root_dir=$(dirname "${BASH_SOURCE[0]}")
-root_dir=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
 user=$(whoami)
+root_dir=$(dirname "${BASH_SOURCE[0]}")
+# root_dir=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
+  echo $user
+  echo $root_dir
+  echo ---------- ---------- ---------- ----------
 
 cloc \
   --fullpath \
