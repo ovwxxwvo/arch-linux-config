@@ -56,6 +56,7 @@ sudo pacman -S \
 
 # ========== network == ========== ==========
   clash \
+  copyparty \
   arp-scan \
   lsof \
   socat \
@@ -96,10 +97,10 @@ sudo pacman -S \
   swayidle \
   swaylock-effects \
   xorg-xwayland \
+  wlr-randr \
+  wf-recorder \
   grim \
   slurp \
-  wf-recorder \
-  wlr-randr \
   xdg-desktop-portal-termfilechooser \
   virtualbox \
   virtualbox-host-dkms \

@@ -1,0 +1,37 @@
+#!/usr/bin/env dash
+
+
+block="$HOME/.config/swaybar/block"
+. "$block"/icon.sh
+. "$block"/color.sh
+LABEL="$ICON_COPYPARTY"
+
+
+ACTIVE=$( ps -ef \
+  |grep -v 'grep' \
+  |grep -oc 'copyparty -' \
+  )
+# echo CL $ACTIVE
+
+
+show_block() {
+  if [ $ACTIVE -eq 1 ]; then
+    BLOCK=" $LABEL"
+  else
+    BLOCK=""
+  fi
+  echo "$BLOCK"
+  echo "$BLOCK"
+  }
+
+show_color() {
+  if [ $ACTIVE -eq 1 ]; then
+    echo $c_lelt
+  fi
+  }
+
+
+show_block
+show_color
+
+
