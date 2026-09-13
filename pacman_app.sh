@@ -33,9 +33,13 @@ sudo pacman -S \
   bluez \
   bluez-tools \
   bluez-utils \
-  pulseaudio \
-  pulseaudio-alsa \
-  pulseaudio-bluetooth \
+  pipewire       \
+  wireplumber    \
+  pipewire-docs  \
+  pipewire-audio \
+  pipewire-alsa  \
+  pipewire-pulse \
+  pavucontrol \
   samba \
   smbclient \
 
